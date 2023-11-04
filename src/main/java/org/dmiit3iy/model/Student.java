@@ -18,6 +18,7 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @NonNull
+    @Column(unique = true)
     private String fio;
     @NonNull
     private int age;

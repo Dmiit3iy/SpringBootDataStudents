@@ -1,0 +1,132 @@
+### add Student
+POST localhost:8080/student
+content-type:application/json
+
+{
+  "fio" : "Ivanov Ivan Ivanovich",
+  "age" : 22,
+  "num" : "AST-211",
+  "salary" : 20000
+}
+
+### add Student
+POST localhost:8080/student
+content-type:application/json
+
+{
+  "fio" : "Petrov Petr Ivanovich",
+  "age" : 24,
+  "num" : "AST-2112",
+  "salary" : 40000
+}
+### add Student
+POST localhost:8080/student
+content-type:application/json
+
+{
+  "fio" : "Vasilev Vasiluy Vasilievich",
+  "age" : 23,
+  "num" : "AST-215",
+  "salary" : 23000
+}
+### add Student
+POST localhost:8080/student
+content-type:application/json
+
+{
+  "fio" : "Pupkin Oleg Ivanovich",
+  "age" : 23,
+  "num" : "AST-219",
+  "salary" : 20000
+}
+
+
+### get all Students
+GET localhost:8080/student
+
+### get Student by id
+GET localhost:8080/student/2
+
+### get Student by incorrect id
+GET localhost:8080/student/100
+
+### get all Students by age
+GET localhost:8080/student/search?age=22
+
+### remove Student by id
+DELETE localhost:8080/student/1
+
+### update Student
+PUT localhost:8080/student/
+content-type:application/json
+
+{
+  "id" : 3,
+  "fio" : "Vasilev Vasiluy Vasilievich",
+  "age" : 40,
+  "num" : "AST-219",
+  "salary" : 23000
+}
+
+### add Car
+POST localhost:8080/car/1
+content-type:application/json
+
+{
+  "brand" : "Nissan",
+  "power" : 100,
+  "year" : 2018
+}
+
+
+### add Car
+ POST localhost:8080/car/1
+content-type:application/json
+
+{
+  "brand" : "Volga",
+  "power" : 98,
+  "year" : 2022
+}
+
+### add Car
+ POST localhost:8080/car/3
+content-type:application/json
+
+{
+  "brand" : "Volga",
+  "power" : 98,
+  "year" : 2022
+}
+
+
+
+### get all Car
+GET localhost:8080/car
+
+### get Car by id
+GET localhost:8080/car/2
+
+### get Car by incorrect id
+GET localhost:8080/car/100
+
+### get all Car by brand
+GET localhost:8080/car/search?brand=Volga
+
+### remove Car by id
+DELETE localhost:8080/car/1
+
+### update Car
+PUT localhost:8080/car
+content-type:application/json
+
+{
+  "id" : 1,
+  "brand" : "Nissan",
+  "power" : 98,
+  "year" : 2020
+}
+
+
+
+

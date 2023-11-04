@@ -17,6 +17,7 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @NonNull
+    @Column(unique = true)
     private String brand;
     @NonNull
     private int power;
