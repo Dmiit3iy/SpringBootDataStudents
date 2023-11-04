@@ -6,9 +6,10 @@ import org.dmiit3iy.repository.CarRepository;
 import org.dmiit3iy.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class CarServiceImpl implements CarService {
     private CarRepository carRepository;
     private StudentRepository studentRepository;
@@ -55,7 +56,7 @@ public class CarServiceImpl implements CarService {
         try {
             this.carRepository.save(base);
             return car;
-        } catch (DataIntegrityViolationException e) { 
+        } catch (DataIntegrityViolationException e) {
             throw new IllegalArgumentException("TV is already exists!");
         }
     }
