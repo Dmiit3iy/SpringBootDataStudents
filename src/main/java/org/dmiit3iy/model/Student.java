@@ -15,14 +15,14 @@ import java.util.List;
 @Table(name="students")
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @NonNull
-    @Column(unique = true)
     private String fio;
     @NonNull
     private int age;
     @NonNull
+    @Column(unique = true)
     private String num;
     @NonNull
     private BigDecimal salary;

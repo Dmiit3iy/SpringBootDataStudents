@@ -80,7 +80,7 @@ content-type:application/json
 
 
 ### add Car
- POST localhost:8080/car/1
+ POST localhost:8080/car/2
 content-type:application/json
 
 {
@@ -94,9 +94,9 @@ content-type:application/json
 content-type:application/json
 
 {
-  "brand" : "Volga",
-  "power" : 98,
-  "year" : 2022
+  "brand" : "Kamaz",
+  "power" : 123,
+  "year" : 2023
 }
 
 

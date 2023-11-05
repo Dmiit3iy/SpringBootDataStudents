@@ -12,21 +12,21 @@ import java.util.List;
 @Service
 public class CarServiceImpl implements CarService {
     private CarRepository carRepository;
-    private StudentRepository studentRepository;
+    private StudentService studentService;
+
 
     @Autowired
     public void setCarRepository(CarRepository carRepository) {
         this.carRepository = carRepository;
     }
-
     @Autowired
-    public void setStudentRepository(StudentRepository studentRepository) {
-        this.studentRepository = studentRepository;
+    public void setStudentService(StudentService studentService) {
+        this.studentService = studentService;
     }
 
     @Override
     public void add(long studentId, Car car) {
-        Student student = studentRepository.getById(studentId);
+        Student student = studentService.get(studentId);
         car.setStudent(student);
         try {
             this.carRepository.save(car);
@@ -64,7 +64,7 @@ public class CarServiceImpl implements CarService {
     @Override
     public Car delete(long id) {
         Car car = this.get(id);
-        carRepository.deleteById(id);
+        this.carRepository.deleteById(id);
         return car;
     }
 }

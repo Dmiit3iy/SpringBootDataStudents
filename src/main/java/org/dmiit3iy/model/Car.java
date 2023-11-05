@@ -14,7 +14,7 @@ import javax.persistence.*;
 @Table(name="cars")
 public class Car {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @NonNull
     @Column(unique = true)
@@ -22,7 +22,6 @@ public class Car {
     @NonNull
     private int power;
     @NonNull
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd.MM.yyyy")
     private int year;
     @ManyToOne
     @JoinColumn(name = "student_id", nullable = false)
